@@ -1,12 +1,6 @@
 const getUserNames = (users) => {
 
-    const resArr = []
-
-    users.forEach((el) => {
-        resArr.push(el.name)
-    })
-
-    return resArr
+    return users.map(el => el.name)
 }
 
 console.log(

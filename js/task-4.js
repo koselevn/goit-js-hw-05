@@ -1,13 +1,14 @@
 const getTotalBalanceByGender = (users, gender) => {
-    let FullBalance = 0
 
-    users.forEach((el) => {
-        if (el.gender === gender) {
-            FullBalance += el.balance
-        }
-    })
+  return users.reduce((accum, el) => {
+    if (el.gender === gender) {
+      return accum + el.balance
+    }
 
-    return FullBalance
+    return accum
+    
+    }, 0)
+
 }
 
 
